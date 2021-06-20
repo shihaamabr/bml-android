@@ -19,13 +19,13 @@ import dev.shihaam.basedbml.R
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var loginViewModel: LoginViewModel
-    private lateinit var binding: ActivityLoginBinding
+private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+     binding = ActivityLoginBinding.inflate(layoutInflater)
+     setContentView(binding.root)
 
         val username = binding.username
         val password = binding.password
@@ -45,7 +45,7 @@ class LoginActivity : AppCompatActivity() {
                 username.error = getString(loginState.usernameError)
             }
             if (loginState.passwordError != null) {
-                password.error = getString(loginState.passwordError)
+               password.error = getString(loginState.passwordError)
             }
         })
 
